@@ -1,0 +1,38 @@
+.planned-trips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table {
+  border: 1px solid black;
+}
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.table .header {
+  font-weight: 500;
+}
+.table .header th {
+  padding: 0.5rem;
+}
+.table .warn {
+  color: red;
+}
+
+.form .row {
+  margin: 0.5rem;
+}
+.form h2 {
+  margin-top: 1rem;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+.form Field, .form TimePickerField, .form DatePickerField {
+  border-radius: 5px;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

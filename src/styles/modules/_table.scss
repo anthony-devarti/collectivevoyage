@@ -1,0 +1,16 @@
+.table {
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    border: 1px solid black;
+
+    .header {
+        font-weight: 500;
+
+        th{
+            padding: .5rem
+        }
+    }
+
+    .warn {
+        color: red;
+    }
+}

@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import { DatePickerField } from "../Subcomponents/DatePickerField";
+import { TimePickerField } from "../Subcomponents/TimePickerField";
 
 export default function TripForm({handleClose}) {
   return (
@@ -16,7 +17,7 @@ export default function TripForm({handleClose}) {
         }}
       >
         {({ isSubmitting }) => (
-          <Form>
+          <Form className="form">
             <Row>
               <h2>Event Information</h2>
               <Col>
@@ -37,8 +38,8 @@ export default function TripForm({handleClose}) {
             <Row>
               <Col>
                 <label>
-                  Start Time
-                  <Field type="text" name="startTime" />
+                  Local Start Time
+                  <TimePickerField name="startTime" />
                   <ErrorMessage name="startTime" component="div" />
                 </label>
               </Col>
@@ -158,9 +159,9 @@ export default function TripForm({handleClose}) {
                 </div>
               </Col>
             </Row> */}
-            <button type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={isSubmitting}>
               Submit
-            </button>
+            </Button>
           </Form>
         )}
       </Formik>

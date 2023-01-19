@@ -1,0 +1,10 @@
+@import '../variables';
+
+.trips{
+    height: 100vh - $navbar-height;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["modules/_planned-trips.scss","modules/_table.scss","modules/_form.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;ACFJ;EAEI;;AADA;EAAoB;;AAGpB;EACI;;AAEA;EACI;;AAIR;EACI;;;ACZJ;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;EACA","file":"style.css"}
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;ACCF","file":"style.css"}

@@ -1,4 +1,4 @@
-import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';

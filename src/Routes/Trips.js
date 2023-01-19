@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import CreateTrip from "../Components/Trips/CreateTrip";
 import PlannedTrips from "../Components/Trips/PlannedTrips";
 

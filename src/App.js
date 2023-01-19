@@ -10,6 +10,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import Trips from "./Routes/Trips";
 import MyAccount from "./Routes/MyAccount";
 import Friends from "./Routes/Friends";
+import TripPage from "./Routes/TripPage";
 // import Footer from './components/Footer';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             <Route path="/trips" element={<Trips />} />
             <Route path="/account" element={<MyAccount />} />
             <Route path="/friends" element={<Friends />} />
+            <Route path="/event" element={<TripPage />} />
             {/* Need to make a 404 page  */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>

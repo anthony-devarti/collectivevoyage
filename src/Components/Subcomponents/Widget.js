@@ -1,7 +1,8 @@
-export default function Widget({height, width, content, icon}){
+export default function Widget({height, width, content, icon, title}){
     return (
-        <div className='widget' style={{height: {height}, width: '30vw'}}>
-
+        <div className='widget' style={{height: height, width: width}}>
+            <div className="title">{title}</div>
+            <div>{content}</div>
         </div>
     )
 }

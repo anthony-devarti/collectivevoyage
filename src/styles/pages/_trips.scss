@@ -5,6 +5,33 @@
     width: 100%;
     background-color: blueviolet;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
+    .sidebar {
+        display: flex;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .right-side{
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .top-right{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-around;
+            height: 90%;
+            flex-wrap: wrap;
+        }
+    }
 }

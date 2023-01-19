@@ -19,7 +19,7 @@ function App() {
     <div className='global'>
       <Router>
         <div>
-          <Navbar bg="dark" variant="dark" expand="lg" className="navigator">
+          <Navbar bg="dark" variant="dark" expand="lg" className=" navbar navigator">
             <Container>
               <Navbar.Brand>
                 <Link to="/" className="brand">

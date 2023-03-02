@@ -2,6 +2,7 @@ import { Container, Button } from "react-bootstrap";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
+import CreateTrip from "./CreateTrip";
 
 const trips = [
     {
@@ -27,7 +28,6 @@ const trips = [
 export default function PlannedTrips() {
 
     let currentDate = moment(Date.now()).format('MM/DD/YYYY')
-    console.log(currentDate)
 
     const days = (date_1, date_2) => {
         let difference = date_1.getTime() - date_2.getTime();
@@ -40,6 +40,18 @@ export default function PlannedTrips() {
     }
 
     //some sorting should happen before we start mapping, probably?
+    const futureTrips = trips.filter(trip => moment(trip.date) >= moment(Date.now()))
+
+    if (futureTrips.length < 1) {
+        return (
+            <>
+            <h2>
+            You don't have any trips coming up.  Why not plan one now?
+            </h2>
+            <CreateTrip />
+            </>
+        )
+    }
 
     return (
         <Container className="planned-trips">
@@ -57,7 +69,7 @@ export default function PlannedTrips() {
                 </thead>
                 <tbody>
 
-                    {trips.map((trip, index) => {
+                    {futureTrips.map((trip, index) => {
 
                         let eventDate = moment(trip.date).format('MM/DD/YYYY')
                         let distance = days(new Date(eventDate), new Date(currentDate))

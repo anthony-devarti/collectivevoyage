@@ -62,6 +62,16 @@
   height: 5vh;
 }
 
+.trips-card {
+  border-radius: 10pt;
+  background-color: aqua;
+  width: 20vw;
+  height: 20vh;
+}
+.trips-card .row {
+  height: 65px;
+}
+
 .trips {
   height: 95vh;
   width: 100%;

@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
+import TripsCard from "../Components/Subcomponents/TripsCard";
 import CreateTrip from "../Components/Trips/CreateTrip";
-import PlannedTrips from "../Components/Trips/PlannedTrips";
+import EventsTable from "../Components/Trips/EventsTable";
 
 export default function Trips() {
     return (
@@ -12,10 +13,16 @@ export default function Trips() {
                 <CreateTrip />
             </div>
             <div>
-                <h2>Planned Trips</h2>
+                <h2>Events</h2>
             </div>
             <div>
-                <PlannedTrips />
+                <EventsTable />
+            </div>
+            <div>
+                <h2>Trips</h2>
+            </div>
+            <div>
+                <TripsCard />
             </div>
         </Container>
     )

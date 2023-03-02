@@ -4,24 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import CreateTrip from "./CreateTrip";
 
-const trips = [
+const exampleEvents = [
     {
         name: 'Modern RCQ',
-        date: '2023-01-22T05:00:00.00Z',
+        date: '2023-03-22T05:00:00.00Z',
         store: 'Bad Wolf Games',
-        format: 'Modern'
+        format: 'Modern',
+        confirmed: true
     },
     {
         name: 'Sealed Pre-Release',
-        date: '2023-01-19T05:00:00.00Z',
+        date: '2023-03-19T05:00:00.00Z',
         store: 'CM Games',
-        format: 'Sealed'
+        format: 'Sealed',
+        confirmed: false
     },
     {
         name: 'Standard IQ',
-        date: '2023-01-28T05:00:00.00Z',
+        date: '2023-03-28T05:00:00.00Z',
         store: 'CM Games',
-        format: 'Standard'
+        format: 'Standard',
+        confirmed: true
     }
 ]
 
@@ -40,14 +43,16 @@ export default function PlannedTrips() {
     }
 
     //some sorting should happen before we start mapping, probably?
-    const futureTrips = trips.filter(trip => moment(trip.date) >= moment(Date.now()))
+    // Should probably filter on the GET request instead 
+    const futureEvents = exampleEvents.filter(trip => moment(trip.date) >= moment(Date.now()))
 
-    if (futureTrips.length < 1) {
+    if (futureEvents.length < 1) {
         return (
             <>
             <h2>
-            You don't have any trips coming up.  Why not plan one now?
+            No Events
             </h2>
+            <p>There are no upcoming events that we know about given your filters.  Heard about an event? Add it to this service so you and others can plan a trip for it!</p>
             <CreateTrip />
             </>
         )
@@ -65,13 +70,14 @@ export default function PlannedTrips() {
                         <th>Store</th>
                         <th>Format</th>
                         <th>Event Page</th>
+                        <th>Confirmed?</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    {futureTrips.map((trip, index) => {
+                    {futureEvents.map((event, index) => {
 
-                        let eventDate = moment(trip.date).format('MM/DD/YYYY')
+                        let eventDate = moment(event.date).format('MM/DD/YYYY')
                         let distance = days(new Date(eventDate), new Date(currentDate))
                         let warn = ''
                         if (distance.substring(0, distance.indexOf(' ')) < 3) {
@@ -82,25 +88,28 @@ export default function PlannedTrips() {
                         return (
                             <tr key={index}>
                                 <td>
-                                    {trip.name}
+                                    {event.name}
                                 </td>
                                 <td>
                                     {eventDate}
                                 </td>
                                 <td>
-                                    {trip.startTime}
+                                    {event.startTime}
                                 </td>
                                 <td className={warn}>
                                     {distance}
                                 </td>
                                 <td>
-                                    {trip.store}
+                                    {event.store}
                                 </td>
                                 <td>
-                                    {trip.format}
+                                    {event.format}
                                 </td>
                                 <td>
                                     <Button><FontAwesomeIcon icon={faExternalLink} /></Button>
+                                </td>
+                                <td>
+                                    {event.confirmed ? 'yes' : 'no'}
                                 </td>
                             </tr>
 

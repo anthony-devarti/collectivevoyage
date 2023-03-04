@@ -72,6 +72,30 @@
   height: 65px;
 }
 
+.user-bubble-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.user-bubble-container .user-bubble {
+  padding: 1rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+}
+
+.comments {
+  display: flex;
+  flex-direction: row;
+}
+.comments .comment-card {
+  border-radius: 10pt;
+  border: 2pt solid white;
+  height: 90%;
+}
+
 .trips {
   height: 95vh;
   width: 100%;

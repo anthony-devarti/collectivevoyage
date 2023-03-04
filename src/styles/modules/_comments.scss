@@ -1,0 +1,10 @@
+.comments {
+    display: flex;
+    flex-direction: row;
+
+    .comment-card{
+        border-radius: 10pt;
+        border: 2pt solid white;
+        height: 90%;
+    }
+}

@@ -60,7 +60,7 @@ function App() {
             <Route path="/trips" element={<Trips />} />
             <Route path="/account" element={<MyAccount />} />
             <Route path="/friends" element={<Friends />} />
-            <Route path="/event" element={<TripPage />} />
+            <Route path="/trip" element={<TripPage />} />
             {/* Need to make a 404 page  */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
